@@ -6,6 +6,8 @@ TagManager:
   tags:
   - door
   - Door
+  - BoxTrigger
+  - Music
   layers:
   - Default
   - TransparentFX
