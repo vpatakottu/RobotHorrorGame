@@ -14,6 +14,10 @@ public class KeyPress : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (Input.GetKeyDown(key)) {
+            DataHolder.UpdateChoices(button.GetComponentInChildren<Text>().text);
+           // button.onClick.Invoke();
+        }
         
     }
 
@@ -21,6 +25,7 @@ public class KeyPress : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(key)) {
+            DataHolder.UpdateChoices(button.GetComponentInChildren<Text>().text);
             button.onClick.Invoke();
         }
     }
