@@ -33,11 +33,22 @@ How to Use
 -----------
 Once you clone this repository, you will have a folder called 'RobotHorrorGame' in your directory. You will then want to open up Unity and 'Open' the folder titled 'RobotHorrorGame'. You should then click the 'Assets' folder and click "Reimport All" to avoid issues with the assets in the game. 
 
-Structre of Video Game
+Structure of Video Game
 ----------------------
-After opening this project in Unity, there should be about 13 scenes under Assets -> Scenes. Each scene represents a choice made by the user; therefore, we have labeled the scenes associated with the bad choices as "Badx" and good choices as "Goodx". There is also a initial, success, and failure screen. 
+Scenes:
+ - After opening this project in Unity, there should be 13 scenes under Assets -> Scenes. Each scene represents a choice made by the user; therefore, we have labeled the scenes associated with the bad choices as "Bad[x]" and good choices as "Good[x]". There is also a initial, success, and failure screen. 
+ - All scenes (except for the success and failure screens) contain a copy of the decision screens, cabin, and associated assets. 
+ - Each bad scene will contain Dave while each good scene will contain Kyle, and we have included the associated gestures for each robot under the Animation folder in Assets -> Animation, and each scene will trigger a different animation for Kyle and Dave. 
 
-Transitions: 
+Decision Screens:
+ - Decisions are displayed using a script called `textOnScreen.cs`, and this script is attached to a `D[x]_TextSpace` object, where the `x` represents which decision (1-5). 
+ - As parameters to the script, we must pass in a `Canvas` object (in our case, this is labeled as `D[x]_Canvas`, the character object, and the number of seconds we want the decision screen to display for. 
+ - As a result, when the player collides with the `D[x]_TextSpace` object, it will display the associated `D[x]_Canvas` containing the choices.
+ - Kyle is also placed within the `D[x]_Canvas` so that it shows up when the user triggers the decision screen. 
+
+Scene Transitions:
+ - Scene transitions are taken care of by a script called `Transition.cs`. 
+ - Within each decision canvas, there are two buttons each user can click. Both buttons will call the `FadeToLevel()` method within `Transition.cs` when clicked, and the scene level to transition to must be specified within those buttons. You can find scene levels under File -> Build Settings.
 
 
 How to Manipulate Sound Conditions
