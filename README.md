@@ -31,9 +31,14 @@ Once you clone this repository, you will have a folder called 'RobotHorrorGame' 
 
 How to Manipulate Sound Conditions
 ----------------------------------
-For the background sound manipulation, you must change the sound in the initial scene and then go into each of the 'Bad' scenes ('Bad1', 'Bad2'..) and change the sound for wrong decisions as well. **(maybe we can be a bit more detailed here)**
+For the background sound manipulation, you must change the sound in the initial scene and then go into each of the 'Bad' scenes ('Bad1', 'Bad2'..) and change the sound for wrong decisions as well. There is sound that plays while the player navigates through the whole game as well as sound that is triggered when the user makes a wrong decision. There should be an audio gameobject towards the bottom of the heirarchy where you can change this.
 
-For the robot sound manipulation, you must change the sound in all of the 'Good' scenes ('Good1', 'Good2'..) where the good robot appears. You must also mute the background sound in the initial scene. **(maybe we can be a bit more detailed here)**
+For the robot sound manipulation, you must change the sound in all of the 'Good' scenes ('Good1', 'Good2'..) where the good robot appears. You must also mute the background sound in the initial scene. This will only require you to go into the intial scene and mute one audio gameobject. After this, you will have to go into the bad scenes and remove the sound from the bad decisions as well. 
+
+All of these sound mannipulation tips go along with our original design for the game and study to observe the effect of background sound vs sound from the robot. Once you are able to get a hang of navigating the game, you are more than welcome to take the sound manipulation in a different direction.
+
+
+
 
 
 
